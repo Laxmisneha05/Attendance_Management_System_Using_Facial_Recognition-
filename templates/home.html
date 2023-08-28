@@ -3,7 +3,7 @@
 
 <style type='text/css'>
     body {
-        background: linear-gradient(to right, rgba(185, 174, 161, 0.782),#5b5050);
+        background: linear-gradient(to right, rgba(185, 174, 161, 0.782), #5b5050);
         background-size: cover;
         font-family: sans-serif;
         margin-top: 40px;
@@ -20,7 +20,8 @@
         margin: auto;
     }
 
-    td,th {
+    td,
+    th {
         border: 1px solid black !important;
         padding: 5px;
     }
@@ -29,26 +30,28 @@
         background-color: #dddddd;
     }
 
-    .h-font{
-    font-family: 'Merienda', cursive;
+    .h-font {
+        font-family: 'Merienda', cursive;
     }
 
     .btn {
         background-color: #817373 !important;
         color: #fff !important;
         transition: all .7s !important;
-        }
+    }
+
     .btn:hover {
         color: black !important;
-        background-color: teal!important;
+        background-color: teal !important;
         border-color: teal;
-        }
-    
-    .navbar-custom{
+    }
+
+    .navbar-custom {
         background-color: #5b5050;
         color: white;
     }
-    .footer{
+
+    .footer {
         position: fixed;
         bottom: 0;
         width: 100vw;
@@ -62,21 +65,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>attendence Portal</title>
+    <title>Attendence Portal</title>
+    <style type='text/css'>
+        .top-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+    
+        .right-button {
+            margin-left: auto;
+            margin-right: 35px;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class='mt-3 text-center'>
-        <h1 style="text-align: center; font-size: 44px;" class="apple h-font">Attendence Portal</h1>
+        <div class='top-buttons'>
+            <h1 style="text-align: center; font-size: 44px; flex-grow: 1;" class="apple h-font">Attendance Portal</h1>
+            <button class="btn right-button">List of Users</button>
+        </div>
     </div>
-    <br/>
+    <br />
+
+
+
 
 
     {% if mess%}
@@ -87,13 +111,13 @@
 
         <div class="col"
             style="border-radius: 20px;padding: 0px;background-color:rgb(211,211,211,0.5);margin:0px 10px 10px 10px;min-height: 400px;">
-            <h2 style="border-radius: 20px 20px 0px 0px; background-color: #5b5050; color: white;padding: 10px;" class="h-font">Today's
+            <h2 style="border-radius: 20px 20px 0px 0px; background-color: #5b5050; color: white;padding: 10px;"
+                class="h-font">Today's
                 Attendance <i class="material-icons">assignment</i></h2>
             <a style="text-decoration: none;max-width: 300px;" href="/start">
                 <button
                     style="font-size: 24px; font-weight: bold; border-radius: 10px; border: none; width:490px; padding: 10px; margin-top: 30px; margin-bottom: 30px;"
-                    type='submit' class='btn h-font'>Take Attendance <i
-                        class="material-icons">beenhere</i></button>
+                    type='submit' class='btn h-font'>Take Attendance <i class="material-icons">beenhere</i></button>
             </a>
             <table style="background-color: white;" class="h-font">
                 <tr>
@@ -132,7 +156,8 @@
                 <input type="number" id="newusereid" name='newuserid'
                     style="font-size: 20px;margin-top:10px;margin-bottom:10px;" required>
                 <br>
-                <button style="width: 232px; margin-top: 20px; font-size: 20px; font-weight: bold;" type='submit' class='btn'>Add
+                <button style="width: 232px; margin-top: 20px; font-size: 20px; font-weight: bold;" type='submit'
+                    class='btn'>Add
                     New User
                 </button>
                 <br>
@@ -143,8 +168,9 @@
     </div>
 
     <footer>
-        <h6 class="text-end h-font navbar-custom p-3 m-0 footer">Designed and Devloped by Laxmisneha Chilukuri and Shreya Sanap &nbsp;</h6>
-      </footer>
+        <h6 class="text-end h-font navbar-custom p-3 m-0 footer">Designed and Devloped by Laxmisneha Chilukuri and
+            Shreya Sanap &nbsp;</h6>
+    </footer>
 </body>
 
 </html>
